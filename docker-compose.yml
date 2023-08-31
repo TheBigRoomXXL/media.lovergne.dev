@@ -1,0 +1,18 @@
+version: "2.4"
+services:
+
+  music-server:
+    image: sentriz/gonic:latest
+    container_name: music-svr
+    ports:
+      - 4747:80
+    volumes:
+      - ./music/.data:/data
+      - ./music/:/music:ro
+      - ./music/.playlists:/playlists
+
+  music-client:
+    image: tamland/airsonic-refix:latest
+    container_name: music-clt
+    ports:
+      - 4748:80
