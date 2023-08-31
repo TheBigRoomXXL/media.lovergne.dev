@@ -4,6 +4,7 @@ services:
   music-server:
     image: sentriz/gonic:latest
     container_name: music-svr
+    restart: unless-stopped
     ports:
       - 4747:80
     volumes:
@@ -14,5 +15,6 @@ services:
   music-client:
     image: tamland/airsonic-refix:latest
     container_name: music-clt
+    restart: unless-stopped
     ports:
       - 4748:80
