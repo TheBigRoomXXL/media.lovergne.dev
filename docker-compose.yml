@@ -1,6 +1,18 @@
 version: "2.4"
 services:
 
+  filebrowser:
+    container_name: filebrowser
+    restart: unless-stopped
+    volumes:
+      - './:/srv'
+      - type: bind
+        source: ./.filebrowser/filebrowser.db
+        target: /database.db
+    ports:
+      - '4746:80'
+    image: filebrowser/filebrowser
+
   music-server:
     image: sentriz/gonic:latest
     container_name: music-svr
