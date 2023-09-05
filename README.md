@@ -11,8 +11,6 @@ with the subsonic API
 - [airsonic-refix](https://github.com/tamland/airsonic-refix) a subsonic web
 client
 
-
 TODO:
-
 - something for photos
-- backup system !
+- something to get data from gdrive

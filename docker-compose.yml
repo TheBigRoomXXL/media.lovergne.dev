@@ -5,10 +5,9 @@ services:
     container_name: filebrowser
     restart: unless-stopped
     volumes:
-      - './:/srv'
-      - type: bind
-        source: ./.filebrowser/filebrowser.db
-        target: /database.db
+      - ./:/srv
+      - ./.filebrowser/data/:/data/
+      - ./.filebrowser/config.json:/.filebrowser.json
     ports:
       - '4746:80'
     image: filebrowser/filebrowser
