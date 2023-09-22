@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/srv
-      - ./.filebrowser/data/:/data/
+      - ./.filebrowser/.data/:/data/
       - ./.filebrowser/config.json:/.filebrowser.json
     ports:
       - '4746:80'
@@ -29,3 +29,4 @@ services:
     restart: unless-stopped
     ports:
       - 4748:80
+
