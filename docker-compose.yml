@@ -30,3 +30,22 @@ services:
     ports:
       - 4748:80
 
+  # photo:
+  #   image: photoprism/photoprism:latest
+  #   container_name: photo
+  #   restart: unless-stopped
+  #   environment:
+  #       - PHOTOPRISM_ADMIN_PASSWORD=tmp
+  #   volumes:
+  #       - ./photo/.data/:/photoprism/storage
+  #       - ./photo/processed:/photoprism/originals
+  #       - ./photo/import:/photoprism/import
+  #   ports:
+  #       - '4749:2342'
+
+  it-tools:
+    container_name: it-tools
+    image: 'corentinth/it-tools:latest'
+    ports:
+        - '4750:80'
+    restart: unless-stopped
