@@ -20,15 +20,11 @@ services:
     volumes:
       - ./:/srv
       - ./apps/filebrowser/:/database/
-    ports:
-      - '5000:80'
     image: filebrowser/filebrowser
 
   music-server:
     image: sentriz/gonic:latest
     container_name: music-server
-    ports:
-      - 5001:80
     volumes:
       - ./music/:/music:ro
       - ./apps/gonic/db:/data
@@ -39,8 +35,6 @@ services:
     image: tamland/airsonic-refix:latest
     container_name: music-client
     restart: unless-stopped
-    ports:
-      - 5002:80
 
   feeds:
     container_name: feeds
@@ -50,13 +44,9 @@ services:
       - ./apps/glance/assets:/app/assets
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-    ports:
-      - 5003:8080
     restart: unless-stopped
 
   dev-tools:
     container_name: dev-tools
     image: 'corentinth/it-tools:latest'
-    ports:
-        - '5004:80'
     restart: unless-stopped
