@@ -30,8 +30,8 @@ services:
     ports:
       - 4748:80
 
-  it-tools:
-    container_name: it-tools
+  dev-tools:
+    container_name: dev-tools
     image: 'corentinth/it-tools:latest'
     ports:
         - '4750:80'
