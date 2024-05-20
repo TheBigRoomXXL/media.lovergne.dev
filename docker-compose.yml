@@ -1,5 +1,19 @@
 services:
 
+  reverse-proxy:
+    image: caddy
+    container_name: reverse-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./apps/caddy/caddyfile:/etc/caddy/Caddyfile
+      - ./apps/caddy/data:/data
+      - ./apps/caddy/config:/config
+      - ./apps/lovergne.dev:/srv/lovergne.dev
+    restart: unless-stopped
+
   filebrowser:
     container_name: filebrowser
     restart: unless-stopped
@@ -12,18 +26,18 @@ services:
 
   music-server:
     image: sentriz/gonic:latest
-    container_name: music-svr
-    restart: unless-stopped
+    container_name: music-server
     ports:
       - 5001:80
     volumes:
       - ./music/:/music:ro
       - ./apps/gonic/db:/data
       - ./apps/gonic/playlists:/playlists
+    restart: unless-stopped
 
   music-client:
     image: tamland/airsonic-refix:latest
-    container_name: music-clt
+    container_name: music-client
     restart: unless-stopped
     ports:
       - 5002:80

@@ -1,0 +1,41 @@
+{
+	email seb.lovergne@gmail.com
+}
+
+localhost lovergne.dev {
+	encode gzip
+	header Cache-Control max-age=3600
+
+	root * /srv/lovergne.dev
+	file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
+
+media.localhost media.lovergne.dev {
+	reverse_proxy filebrowser
+}
+
+music.localhost music.lovergne.dev {
+	reverse_proxy music-client
+}
+
+api.music.localhost api.music.lovergne.dev {
+	reverse_proxy music-server
+}
+
+feeds.localhost feeds.lovergne.dev {
+	encode gzip
+	header Cache-Control max-age=3600
+
+	reverse_proxy feeds
+}
+
+tools.localhost tools.lovergne.dev {
+	encode gzip
+	header Cache-Control max-age=3600
+	reverse_proxy dev-tools
+}
