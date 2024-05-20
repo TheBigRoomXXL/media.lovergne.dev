@@ -39,3 +39,11 @@ tools.localhost tools.lovergne.dev {
 	header Cache-Control max-age=3600
 	reverse_proxy dev-tools
 }
+
+www.lovergne.dev {
+	redir https://lovergne.dev
+}
+
+feed.lovergne.dev {
+	redir https://feeds.lovergne.dev
+}
