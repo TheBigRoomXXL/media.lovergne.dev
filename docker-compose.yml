@@ -6,11 +6,11 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/srv
-      - ./.filebrowser/.data/:/data/
-      - ./.filebrowser/config.json:/.filebrowser.json
+      - ./apps/filebrowser/:/database/
     ports:
       - '4746:80'
     image: filebrowser/filebrowser
+
 
   music-server:
     image: sentriz/gonic:latest
@@ -19,9 +19,9 @@ services:
     ports:
       - 4747:80
     volumes:
-      - ./music/.data:/data
       - ./music/:/music:ro
-      - ./music/.playlists:/playlists
+      - ./apps/gonic/db:/data
+      - ./apps/gonic/playlists:/playlists
 
   music-client:
     image: tamland/airsonic-refix:latest
@@ -29,19 +29,6 @@ services:
     restart: unless-stopped
     ports:
       - 4748:80
-
-  # photo:
-  #   image: photoprism/photoprism:latest
-  #   container_name: photo
-  #   restart: unless-stopped
-  #   environment:
-  #       - PHOTOPRISM_ADMIN_PASSWORD=tmp
-  #   volumes:
-  #       - ./photo/.data/:/photoprism/storage
-  #       - ./photo/processed:/photoprism/originals
-  #       - ./photo/import:/photoprism/import
-  #   ports:
-  #       - '4749:2342'
 
   it-tools:
     container_name: it-tools

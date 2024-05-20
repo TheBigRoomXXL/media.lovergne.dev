@@ -1,5 +1,5 @@
 music/**
-photo/**
-document/**
+photos/**
+documents/**
+apps/ 
 
-.filebrowser/.data/
