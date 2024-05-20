@@ -1,5 +1,8 @@
 music/**
 photos/**
 documents/**
-apps/ 
+apps/*/**
+
+!apps/glance/*
+!apps/glance/assets/*
 

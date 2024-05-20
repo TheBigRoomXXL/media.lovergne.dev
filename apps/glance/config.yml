@@ -1,0 +1,78 @@
+server:
+  assets-path: /app/assets
+
+theme:
+  background-color: 210, 6 1
+  primary-color: 191 88 42
+  negative-color: 68, 84 42
+  contrast-multiplier: 1.3
+  custom-css-file: /assets/styles.css
+
+pages:
+  - name: Technology
+    columns:
+      - size: full
+        widgets:
+          - type: rss
+            limit: 30
+            collapse-after: 8
+            cache: 1h
+            feeds:
+              - url: https://lovergne.dev/rss.xml
+              - url: https://htmx.org/atom.xml
+              - url: https://www.bitecode.dev/feed
+              - url: https://rednafi.com/index.xml
+              - url: https://blog.danslimmon.com/feed/
+              - url: https://joshcollinsworth.com/api/rss.xml
+              - url: http://feeds.feedburner.com/LetsDiscussTheMatterFurther
+              - url: https://martinfowler.com/feed.atom
+              - url: https://notes.eatonphil.com/rss.xml
+              - url: https://feeds.feedburner.com/DougHellmann
+              - url: https://research.swtch.com/feed.atom
+              - url: https://sirupsen.com/atom.xml
+              - url: https://bitbashing.io/feed.xml
+              - url: https://andy-bell.co.uk/feed.xml
+              - url: https://words.filippo.io/rss/
+              - url: https://lukeplant.me.uk/blog/atom/index.xml
+              - url: https://wizardzines.com/index.xml
+              - url: https://sethmlarson.dev/rss
+              - url: https://www.petemillspaugh.com/rss.xml
+              - url: https://jakelazaroff.com/rss.xml
+              - url: https://digest.browsertech.com/rss
+              - url: https://www.htmhell.dev/feed.xml
+              - url: https://daniel.do/rss.xml
+              - url: https://buttondown.email/hillelwayne/rss
+              - url: https://cliffle.com/rss.xml
+              - url: https://journal.stuffwithstuff.com/rss.xml
+              - url: https://tonsky.me/atom.xml
+              - url: https://chriscoyier.net/feed/
+              - url: https://hamvocke.com/feed.xml
+              - url: https://developer.mozilla.org/en-US/blog/rss.xml
+              - url: https://safjan.com/feeds/all.rss.xml
+              - url: https://feeds.feedburner.com/TroyHunt
+              - url: https://brooker.co.za/blog/rss.xml
+              - url: https://ferd.ca/feed.rss
+              - url: https://blog.google/threat-analysis-group/rss/
+
+          - type: reddit
+            subreddit: selfhosted
+
+          - type: reddit
+            subreddit: golang
+
+      - size: full
+        widgets:
+          - type: hacker-news
+            limit: 30
+            collapse-after: 20
+
+      - size: small
+        widgets:
+          - type: videos
+            style: grid-cards
+            limit: 18
+            channels:
+              - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTimeagen
+              - UCsBjURrPoezykLs9EqgamOA # Fireship
+              - UC6biysICWOJ-C3P4Tyeggzg # Low Level Learning
+

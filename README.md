@@ -13,4 +13,8 @@ client
 
 TODO:
 - something for photos
-- something to get data from gdrive
+- password manager
+- cady proxy 
+- proxy based auth 
+- Something for feeds
+

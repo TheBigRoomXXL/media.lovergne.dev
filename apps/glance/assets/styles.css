@@ -1,0 +1,22 @@
+:root {
+    --color-widget-background-hsl-values: var(--bghs), calc(var(--bgl) + 7%);
+}
+
+a:visited {
+    color: var(--color-negative);
+
+}
+
+.logo {
+    color: transparent;
+    width: var(--header-height);
+    background: url(/assets/sl.svg) no-repeat center center;
+    background-size: cover;
+}
+
+
+*:focus {
+    outline: solid 2px;
+    outline-offset: 0.1em;
+    border-radius: 0.25em;
+}
