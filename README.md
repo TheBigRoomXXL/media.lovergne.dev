@@ -5,16 +5,17 @@ mostly lightweight and minimal services but it's not allways easy to find!
 
 Currently there is :
 
-- [FileBrowser](https://github.com/filebrowser/filebrowser) provides a file managing interface within a specified directory 
-- [gonic](https://github.com/sentriz/gonic), a FLOSS music server compatible 
-with the subsonic API
-- [airsonic-refix](https://github.com/tamland/airsonic-refix) a subsonic web
-client
+- [Caddy]: Awesome proxy with automatic HTTPS
+- [FileBrowser](https://github.com/filebrowser/filebrowser): Provides a web based filebrowser
+- [gonic](https://github.com/sentriz/gonic): FLOSS music server compatible with the subsonic API
+- [airsonic-refix](https://github.com/tamland/airsonic-refix) Subsonic web client. 
+- [glance](https://github.com/glanceapp/glance):  Highly customisable feed agitator.
+- [it-tools](https://github.com/CorentinTh/it-tools): Collection of handy online tools for developers.
+- 
 
 TODO:
 - something for photos
-- password manager
-- cady proxy 
-- proxy based auth 
-- Something for feeds
+- proxy based auth
+- password manager (maybe)
+
 
