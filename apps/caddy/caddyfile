@@ -5,6 +5,7 @@
 localhost lovergne.dev {
 	encode gzip
 	header Cache-Control max-age=3600
+	header X-Clacks-Overhead "GNU Terry Pratchett"
 
 	root * /srv/lovergne.dev
 	file_server
